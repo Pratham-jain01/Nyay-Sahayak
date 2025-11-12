@@ -222,7 +222,7 @@ for message in st.session_state.messages:
 
 # --- Main app logic ---
 async def main():
-get_session()
+    get_session()
     # React to user input
     if prompt := st.chat_input("How can I help you?"):
         # Add user message to chat history
