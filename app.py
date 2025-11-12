@@ -196,7 +196,7 @@ try:
 
     # This import is needed for st.rerun() context
     import asyncio
-    st.session_state.http_session = get_session()
+    #st.session_state.http_session = get_session()
     
 except ImportError:
     st.error("Please install aiohttp to run this app: `pip install aiohttp`")
@@ -222,6 +222,7 @@ for message in st.session_state.messages:
 
 # --- Main app logic ---
 async def main():
+get_session()
     # React to user input
     if prompt := st.chat_input("How can I help you?"):
         # Add user message to chat history
